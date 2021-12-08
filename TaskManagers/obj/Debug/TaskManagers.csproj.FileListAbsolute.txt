@@ -1,0 +1,14 @@
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\bin\Debug\TaskManagers.exe.config
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\bin\Debug\TaskManagers.exe
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\bin\Debug\TaskManagers.pdb
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\bin\Debug\Guna.UI2.dll
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\obj\Debug\TaskManagers.csproj.AssemblyReference.cache
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\obj\Debug\TaskManagers.Forms.FrmRegisterTask.resources
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\obj\Debug\TaskManagers.Forms.FrmTasks.resources
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\obj\Debug\TaskManagers.Properties.Resources.resources
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\obj\Debug\TaskManagers.csproj.GenerateResource.cache
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\obj\Debug\TaskManagers.csproj.CoreCompileInputs.cache
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\obj\Debug\TaskManagers.csproj.CopyComplete
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\obj\Debug\TaskManagers.exe
+C:\Users\Quezada\source\repos\TaskManagers\TaskManagers\obj\Debug\TaskManagers.pdb
