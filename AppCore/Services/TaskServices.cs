@@ -1,11 +1,13 @@
 ﻿using AppCore.IServices;
 using Domain;
+using Domain.Enum;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskStatus = Domain.Enum.TaskStatus;
 
 namespace AppCore.Services
 {
@@ -18,14 +20,14 @@ namespace AppCore.Services
 			this.Repository = repository;
 		}
 
-		public void ChangeImportance(Tasks t)
+		public void ChangeImportance(Tasks t, TaskImportance Importance)
 		{
-			Repository.ChangeImportance( t);
+			Repository.ChangeImportance( t,Importance);
 		}
 
-		public void ChangeStatus(Tasks t)
+		public void ChangeStatus(Tasks t, TaskStatus Status)
 		{
-			Repository.ChangeStatus(t);
+			Repository.ChangeStatus(t,Status);
 		}
 
 		public Tasks FindTask(int id)
@@ -38,9 +40,9 @@ namespace AppCore.Services
 			Repository.FinishTaskDone(t);
 		}
 
-		public void OrderByChoise(Predicate<Tasks> Predicate)
+		public ICollection<Tasks> OrderByChoise(Func<Tasks, bool> Predicate)
 		{
-			Repository.OrderByChoise(Predicate);
+			return Repository.OrderByChoise(Predicate);
 		}
 
 		public void RememberTime()
@@ -61,6 +63,10 @@ namespace AppCore.Services
 		public void Update(Tasks t)
 		{
 			Repository.Update(t);
+		}
+		public void AssingState(Tasks t)
+		{
+			Repository.AssingState(t);
 		}
 	}
 }

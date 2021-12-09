@@ -11,13 +11,13 @@ namespace Domain
 {
 	public class Tasks
 	{
-		int Id { get; set; }
-		DateTime StarTime { get; set; }
-		DateTime EndTime { get; set; }
-		string Description { get; set; }
+		public int Id { get; set; }
+		public DateTime StarTime { get; set; }
+		public DateTime EndTime { get; set; }
+		public string Description { get; set; }
 
-		TaskStatus State { get; set; }
-		TaskImportance Importance { get; set; }
+		public TaskStatus State { get; set; }
+		public TaskImportance Importance { get; set; }
 
 	}
 }

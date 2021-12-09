@@ -9,8 +9,8 @@ namespace Infraestructure.Repository
 {
 	public abstract class BaseRepository<T> : IModel<T>
 	{
-		private List<T> Datos;
-		public BaseRepository()
+		protected List<T> Datos;
+		protected BaseRepository()
 		{
 			Datos = new List<T>();
 		}
