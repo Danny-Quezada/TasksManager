@@ -48,7 +48,10 @@ namespace TaskManagers.Forms
 			this.End = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
 			this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+			this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
+			this.pbChoose = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbChoose)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// guna2BorderlessForm1
@@ -61,7 +64,7 @@ namespace TaskManagers.Forms
 			// 
 			// guna2ShadowForm1
 			// 
-			this.guna2ShadowForm1.BorderRadius = 20;
+			this.guna2ShadowForm1.BorderRadius = 19;
 			this.guna2ShadowForm1.TargetForm = this;
 			// 
 			// guna2ImageButton1
@@ -70,12 +73,12 @@ namespace TaskManagers.Forms
 			this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
 			this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(59, 59);
+			this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(57, 57);
 			this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
 			this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
 			this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
 			this.guna2ImageButton1.ImageRotate = 0F;
-			this.guna2ImageButton1.Location = new System.Drawing.Point(775, 58);
+			this.guna2ImageButton1.Location = new System.Drawing.Point(785, 141);
 			this.guna2ImageButton1.Name = "guna2ImageButton1";
 			this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
@@ -130,7 +133,7 @@ namespace TaskManagers.Forms
 			this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
 			this.guna2DataGridView1.EnableHeadersVisualStyles = false;
 			this.guna2DataGridView1.GridColor = System.Drawing.Color.White;
-			this.guna2DataGridView1.Location = new System.Drawing.Point(13, 14);
+			this.guna2DataGridView1.Location = new System.Drawing.Point(13, 51);
 			this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.guna2DataGridView1.Name = "guna2DataGridView1";
 			this.guna2DataGridView1.ReadOnly = true;
@@ -141,7 +144,7 @@ namespace TaskManagers.Forms
 			this.guna2DataGridView1.RowTemplate.DividerHeight = 2;
 			this.guna2DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.guna2DataGridView1.Size = new System.Drawing.Size(755, 483);
+			this.guna2DataGridView1.Size = new System.Drawing.Size(765, 453);
 			this.guna2DataGridView1.TabIndex = 5;
 			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
 			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -210,12 +213,12 @@ namespace TaskManagers.Forms
 			this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
 			this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(59, 59);
+			this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(57, 57);
 			this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
 			this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
 			this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
 			this.guna2ImageButton2.ImageRotate = 0F;
-			this.guna2ImageButton2.Location = new System.Drawing.Point(761, 167);
+			this.guna2ImageButton2.Location = new System.Drawing.Point(771, 250);
 			this.guna2ImageButton2.Name = "guna2ImageButton2";
 			this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
@@ -229,25 +232,69 @@ namespace TaskManagers.Forms
 			this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton3.CheckedState.Parent = this.guna2ImageButton3;
 			this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(59, 59);
+			this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(57, 57);
 			this.guna2ImageButton3.HoverState.Parent = this.guna2ImageButton3;
 			this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
 			this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
 			this.guna2ImageButton3.ImageRotate = 0F;
-			this.guna2ImageButton3.Location = new System.Drawing.Point(761, 285);
+			this.guna2ImageButton3.Location = new System.Drawing.Point(785, 368);
 			this.guna2ImageButton3.Name = "guna2ImageButton3";
 			this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton3.PressedState.Parent = this.guna2ImageButton3;
 			this.guna2ImageButton3.ShadowDecoration.Parent = this.guna2ImageButton3;
-			this.guna2ImageButton3.Size = new System.Drawing.Size(110, 112);
+			this.guna2ImageButton3.Size = new System.Drawing.Size(96, 112);
 			this.guna2ImageButton3.TabIndex = 6;
+			// 
+			// cmbFilter
+			// 
+			this.cmbFilter.BackColor = System.Drawing.Color.Transparent;
+			this.cmbFilter.BorderColor = System.Drawing.Color.Silver;
+			this.cmbFilter.BorderRadius = 10;
+			this.cmbFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.cmbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cmbFilter.FocusedColor = System.Drawing.Color.Silver;
+			this.cmbFilter.FocusedState.BorderColor = System.Drawing.Color.Silver;
+			this.cmbFilter.FocusedState.FillColor = System.Drawing.Color.Transparent;
+			this.cmbFilter.FocusedState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cmbFilter.FocusedState.ForeColor = System.Drawing.Color.DimGray;
+			this.cmbFilter.FocusedState.Parent = this.cmbFilter;
+			this.cmbFilter.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.cmbFilter.ForeColor = System.Drawing.Color.DimGray;
+			this.cmbFilter.HoverState.Parent = this.cmbFilter;
+			this.cmbFilter.ItemHeight = 30;
+			this.cmbFilter.Items.AddRange(new object[] {
+            "Important",
+            "Very Important",
+            "Secondary",
+            "Not Important"});
+			this.cmbFilter.ItemsAppearance.Parent = this.cmbFilter;
+			this.cmbFilter.Location = new System.Drawing.Point(538, 7);
+			this.cmbFilter.Name = "cmbFilter";
+			this.cmbFilter.ShadowDecoration.Parent = this.cmbFilter;
+			this.cmbFilter.Size = new System.Drawing.Size(140, 36);
+			this.cmbFilter.TabIndex = 7;
+			this.cmbFilter.Visible = false;
+			this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.cmbFilter_SelectedIndexChanged);
+			// 
+			// pbChoose
+			// 
+			this.pbChoose.Image = ((System.Drawing.Image)(resources.GetObject("pbChoose.Image")));
+			this.pbChoose.Location = new System.Drawing.Point(494, 12);
+			this.pbChoose.Name = "pbChoose";
+			this.pbChoose.Size = new System.Drawing.Size(38, 24);
+			this.pbChoose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pbChoose.TabIndex = 8;
+			this.pbChoose.TabStop = false;
+			this.pbChoose.Visible = false;
 			// 
 			// FrmTasks
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(875, 511);
+			this.ClientSize = new System.Drawing.Size(885, 518);
+			this.Controls.Add(this.pbChoose);
+			this.Controls.Add(this.cmbFilter);
 			this.Controls.Add(this.guna2ImageButton3);
 			this.Controls.Add(this.guna2DataGridView1);
 			this.Controls.Add(this.guna2ImageButton2);
@@ -257,6 +304,7 @@ namespace TaskManagers.Forms
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Load += new System.EventHandler(this.FrmTasks_Load);
 			((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbChoose)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -276,5 +324,7 @@ namespace TaskManagers.Forms
 		private System.Windows.Forms.DataGridViewTextBoxColumn Start;
 		private System.Windows.Forms.DataGridViewTextBoxColumn End;
 		private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+		private System.Windows.Forms.PictureBox pbChoose;
+		private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
 	}
 }

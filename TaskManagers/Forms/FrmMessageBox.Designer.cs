@@ -40,15 +40,15 @@ namespace TaskManagers.Forms
 			// 
 			// guna2BorderlessForm1
 			// 
-			this.guna2BorderlessForm1.BorderRadius = 30;
+			this.guna2BorderlessForm1.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_VER_NEGATIVE;
+			this.guna2BorderlessForm1.BorderRadius = 18;
 			this.guna2BorderlessForm1.ContainerControl = this;
 			this.guna2BorderlessForm1.DockForm = false;
-			this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
 			this.guna2BorderlessForm1.TransparentWhileDrag = true;
 			// 
 			// guna2ShadowForm1
 			// 
-			this.guna2ShadowForm1.BorderRadius = 20;
+			this.guna2ShadowForm1.BorderRadius = 10;
 			this.guna2ShadowForm1.TargetForm = this;
 			// 
 			// guna2PictureBox1
@@ -67,7 +67,7 @@ namespace TaskManagers.Forms
 			// guna2AnimateWindow1
 			// 
 			this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_VER_NEGATIVE;
-			this.guna2AnimateWindow1.Interval = 300;
+			this.guna2AnimateWindow1.Interval = 250;
 			this.guna2AnimateWindow1.TargetForm = this;
 			// 
 			// FrmMessageBox
