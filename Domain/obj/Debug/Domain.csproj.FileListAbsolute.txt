@@ -23,3 +23,4 @@ E:\ProyectosC#\TasksManager\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cac
 E:\ProyectosC#\TasksManager\Domain\obj\Debug\Domain.csproj.CopyComplete
 E:\ProyectosC#\TasksManager\Domain\obj\Debug\Domain.dll
 E:\ProyectosC#\TasksManager\Domain\obj\Debug\Domain.pdb
+E:\ProyectosC#\TasksManager\Domain\bin\Debug\Tulpep.NotificationWindow.dll

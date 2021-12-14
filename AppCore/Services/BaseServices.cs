@@ -32,9 +32,9 @@ namespace AppCore.Services
 			return Model.GetLastId();
 		}
 
-		public T[] Read()
+		public T[] Read(int opcion)
 		{
-			return Model.Read();
+			return Model.Read(opcion);
 		}
 	}
 }

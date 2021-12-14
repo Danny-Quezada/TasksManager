@@ -19,5 +19,6 @@ namespace Domain
 		public TaskStatus State { get; set; }
 		public TaskImportance Importance { get; set; }
 
+		
 	}
 }

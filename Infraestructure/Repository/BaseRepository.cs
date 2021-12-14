@@ -9,19 +9,19 @@ namespace Infraestructure.Repository
 {
 	public abstract class BaseRepository<T> : IModel<T>
 	{
-		protected List<T> Datos;
+		protected List<T> Data;
 		protected BaseRepository()
 		{
-			Datos = new List<T>();
+			Data = new List<T>();
 		}
 		public void Add(T t)
 		{
-			Datos.Add(t);
+			Data.Add(t);
 		}
 
 		public void Delete(T t)
 		{
-			Datos.Remove(t);
+			Data.Remove(t);
 		}
 
 		public virtual int GetLastId()
@@ -29,7 +29,8 @@ namespace Infraestructure.Repository
 		
 				try
 				{
-					return Datos.Count == 0 ? 0 : (int)Datos[Datos.Count - 1].GetType().GetProperty("Id").GetValue(Datos[Datos.Count - 1]);
+					return Data.Count == 0 ? 0 : (int)Data[Data.Count - 1].GetType().GetProperty("Id").GetValue(Data[Data.Count - 1]);
+					
 				}
 				catch (Exception)
 				{
@@ -37,10 +38,8 @@ namespace Infraestructure.Repository
 				}
 		}
 
-		public T[] Read()
-		{
-			return Datos.ToArray();
-		}
+		public abstract T[] Read(int opcion);
+	
 
 		
 	}

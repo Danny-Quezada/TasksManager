@@ -53,3 +53,7 @@ E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Domain.dll.config
 E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Infraestructure.pdb
 E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Infraestructure.dll.config
 E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\TaskManagers.Forms.FrmMessageBox.resources
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Tulpep.NotificationWindow.dll
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\TaskManagers.Forms.FrmStatistics.resources
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\RJCodeAdvance.RJControls.dll
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\PruebaCustom.TimePicker.resources

@@ -10,7 +10,7 @@ namespace AppCore.IServices
 	{
 		void Add(T t);
 		void Delete(T t);
-		T[] Read();
+		T[] Read(int opcion);
 		int GetLastId();
 
 	}

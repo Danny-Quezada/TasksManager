@@ -26,3 +26,4 @@ E:\ProyectosC#\TasksManager\AppCore\obj\Debug\AppCore.csproj.CoreCompileInputs.c
 E:\ProyectosC#\TasksManager\AppCore\obj\Debug\AppCore.csproj.CopyComplete
 E:\ProyectosC#\TasksManager\AppCore\obj\Debug\AppCore.dll
 E:\ProyectosC#\TasksManager\AppCore\obj\Debug\AppCore.pdb
+E:\ProyectosC#\TasksManager\AppCore\bin\Debug\Tulpep.NotificationWindow.dll

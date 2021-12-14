@@ -6,21 +6,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using TaskStatus = Domain.Enum.TaskStatus;
 
 namespace Infraestructure.Repository
 {
 	public class TasksListRepository : BaseRepository<Tasks>, ITaskRepository
 	{
-		List<Tasks> TareasEliminadas;
+		List<Tasks> TasksDeleted;
+		
+
 		public TasksListRepository()
 		{
-			TareasEliminadas = new List<Tasks>();
+			TasksDeleted = new List<Tasks>();
+		
 		}
 
 		public void AssingState(Tasks t)
 		{
-			if (t.StarTime == DateTime.Now)
+			if (t.StarTime < DateTime.Now) // Example: if it is 10 in the morning and I start the task at 9, 1 hour has already passed.
 			{
 				t.State = TaskStatus.Started;
 			}
@@ -28,7 +32,7 @@ namespace Infraestructure.Repository
 			{
 				t.State = TaskStatus.Finished;
 			}
-			else if (t.StarTime < DateTime.Now)
+			else if (t.StarTime > DateTime.Now)
 			{
 				t.State = TaskStatus.WithoutStarting;
 			}
@@ -36,15 +40,19 @@ namespace Infraestructure.Repository
 			{
 				t.State = TaskStatus.Failed;
 			}
+			else if (t.EndTime < DateTime.Now)
+			{
+				t.State = TaskStatus.Failed;
+			}
 		}
 
 		public void ChangeImportance(Tasks t,TaskImportance Importance)
 		{
-			for(int i=0; i<Datos.Count; i++)
+			for(int i=0; i<Data.Count; i++)
 			{
-				if (t.Id == Datos[i].Id)
+				if (t.Id == Data[i].Id)
 				{
-					Datos[i].Importance = Importance;
+					Data[i].Importance = Importance;
 					break;
 				}
 			}
@@ -52,73 +60,96 @@ namespace Infraestructure.Repository
 
 		public void ChangeStatus(Tasks t,TaskStatus Status)
 		{
-			for (int i = 0; i < Datos.Count; i++)
+			for (int i = 0; i < Data.Count; i++)
 			{
-				if (t.Id == Datos[i].Id)
+				if (t.Id == Data[i].Id)
 				{
-					Datos[i].State = Status;
+					Data[i].State = Status;
 					break;
 				}
 			}
 		}
-		
 		public Tasks FindTask(int id)
 		{
-			for (int i = 0; i < Datos.Count; i++)
+			for (int i = 0; i < Data.Count; i++)
 			{
-				if (id == Datos[i].Id)
+				if (id == Data[i].Id)
 				{
-					return Datos[i];
+					return Data[i];
 				}
 			}
 			return null;
 		}
 
-		public void FinishTaskDone(Tasks t)
+		public void FinishTask(Tasks t)
 		{
-			Datos.Remove(t);
-			t.State = TaskStatus.Finished;
-			TareasEliminadas.Add(t);
+			if (t.State == Domain.Enum.TaskStatus.Failed)
+			{
+				Data.Remove(t);
+				TasksDeleted.Add(t);
+			}
+			else if (t.State == Domain.Enum.TaskStatus.Started)
+			{
+				Data.Remove(t);
+				t.State = TaskStatus.Finished;
+				TasksDeleted.Add(t); // Podre separar las tareas hechas como las no hechas para los graficos. con LinQ (sum)
+			}
+			else if(t.State == Domain.Enum.TaskStatus.WithoutStarting)
+			{
+				Data.Remove(t);
+				t.State = Domain.Enum.TaskStatus.Failed;
+				TasksDeleted.Add(t);
+			}
 
 		}
 
 		public ICollection<Tasks> OrderByChoise(Func<Tasks,bool> Predicate)
 		{
-			return Datos.Where(Predicate).ToList();
+			return Data.Where(Predicate).ToList();
 		}
 
-		public void RememberTime()
+		public override Tasks[] Read(int opcion)
 		{
-			throw new NotImplementedException();
+			switch (opcion)
+			{
+				case 1:
+					return Data.ToArray();
+				case 2:
+					return TasksDeleted.ToArray();
+				default:
+					return null;
+			}
 		}
 
 		public void RetrieveTask(Tasks t)
 		{
-			if (TareasEliminadas.Count == 0)
+			if (TasksDeleted.Count == 0)
 			{
-				new Exception("No hay ninguna tarea eliminada");
+				new Exception("There is no task deleted");
 				return;
 			}
-			for(int i=0; i<TareasEliminadas.Count; i++)
+			for(int i=0; i<TasksDeleted.Count; i++)
 			{
-				if (t.Id == TareasEliminadas[i].Id)
+				if (t.Id == TasksDeleted[i].Id)
 				{
 					t.State = TaskStatus.Started;
-					Datos.Add(t);
-					TareasEliminadas.Remove(t);
+					Data.Add(t);
+					TasksDeleted.Remove(t);
 					break;
 				}
 			}
 		}
 
+
+
 		public Tasks TaskById(int id)
 		{
 		
-			for (int i = 0; i < Datos.Count; i++)
+			for (int i = 0; i < Data.Count; i++)
 			{
-				if (id == Datos[i].Id)
+				if (id == Data[i].Id)
 				{
-					return Datos[i];
+					return Data[i];
 				
 				}
 			}
@@ -128,11 +159,11 @@ namespace Infraestructure.Repository
 		public void Update(Tasks t)
 		{
 			bool Actualizado = false;
-			for(int i=0; i<Datos.Count; i++)
+			for(int i=0; i<Data.Count; i++)
 			{
-				if (t.Id == Datos[i].Id)
+				if (t.Id == Data[i].Id)
 				{
-					Datos.Insert(i, t);
+					Data.Insert(i, t);
 					Actualizado = true;
 				}
 			}

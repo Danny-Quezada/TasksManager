@@ -16,5 +16,18 @@ namespace TaskManagers.Forms
 		{
 			InitializeComponent();
 		}
+
+		private void FrmStatistics_Load(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void gunaChart1_Load(object sender, EventArgs e)
+		{
+			for(int i=0; i<10; i++)
+			{
+				gunaDoughnutDataset1.DataPoints.Add($"Pepe {i}",i);
+			}
+		}
 	}
 }

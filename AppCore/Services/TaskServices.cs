@@ -35,20 +35,14 @@ namespace AppCore.Services
 			return Repository.FindTask(id);
 		}
 
-		public void FinishTaskDone(Tasks t)
-		{
-			Repository.FinishTaskDone(t);
-		}
+	
 
 		public ICollection<Tasks> OrderByChoise(Func<Tasks, bool> Predicate)
 		{
 			return Repository.OrderByChoise(Predicate);
 		}
 
-		public void RememberTime()
-		{
-			Repository.RememberTime();
-		}
+	
 
 		public void RetrieveTask(Tasks t)
 		{
@@ -68,5 +62,11 @@ namespace AppCore.Services
 		{
 			Repository.AssingState(t);
 		}
+
+		public void FinishTask(Tasks t)
+		{
+			Repository.FinishTask(t);
+		}
+
 	}
 }

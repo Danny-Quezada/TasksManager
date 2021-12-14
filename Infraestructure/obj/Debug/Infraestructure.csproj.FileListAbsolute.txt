@@ -26,3 +26,4 @@ E:\ProyectosC#\TasksManager\Infraestructure\obj\Debug\Infraestructure.csproj.Cor
 E:\ProyectosC#\TasksManager\Infraestructure\obj\Debug\Infraestructure.csproj.CopyComplete
 E:\ProyectosC#\TasksManager\Infraestructure\obj\Debug\Infraestructure.dll
 E:\ProyectosC#\TasksManager\Infraestructure\obj\Debug\Infraestructure.pdb
+E:\ProyectosC#\TasksManager\Infraestructure\bin\Debug\Tulpep.NotificationWindow.dll
