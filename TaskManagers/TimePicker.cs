@@ -363,7 +363,7 @@ namespace PruebaCustom
 				{
 
 					this.Horas = 12;
-					lblHora.Text = $"{this.Horas}";
+					lblHora.Text = "12";
 				}
 				this.VerificarHora = true;
 				CerrarHoras();

@@ -16,17 +16,29 @@ namespace TaskManagers.Forms
 	public partial class FrmRegisterTask : Form
 	{
 		public ITaskServices Services { get; set; }
-		public FrmRegisterTask()
+		private int Option=0;
+		private Tasks Tasks;
+		public FrmRegisterTask(int option,Tasks tasks)
 		{
-
 			InitializeComponent();
-		}
 
-		private void FrmRegisterTask_Load(object sender, EventArgs e)
-		{
+			this.Tasks = tasks;
+			this.Option = option;
 		
 
-			
+		}
+		public FrmRegisterTask()
+		{
+			InitializeComponent();
+		}
+		private void FrmRegisterTask_Load(object sender, EventArgs e)
+		{
+			if (Option == 1)
+			{
+				txtDescription.Text = Tasks.Description;
+				cmbImportance.SelectedIndex = (int)Tasks.Importance;
+			}
+
 
 		}
 
@@ -104,18 +116,40 @@ namespace TaskManagers.Forms
 				MessageBox.Show($"You cannot put a final hour less than the hour: {DateTime.Now.ToString("HH:mm:ss")}", "Time information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				return;
 			}
-			Tasks Task = new Tasks()
+
+			if (Option == 0)
 			{
-				Description=txtDescription.Text,
-				Id=Services.GetLastId()+1,
-				EndTime=End,
-				Importance=(TaskImportance)cmbImportance.SelectedIndex,
-				StarTime=Start
-				
-			};
-			Services.AssingState(Task); 
-			Services.Add(Task);
-			Dispose();
+				Tasks Task = new Tasks()
+				{
+					Description = txtDescription.Text,
+					Id = Services.GetLastId(),
+					EndTime = End,
+					Importance = (TaskImportance)cmbImportance.SelectedIndex,
+					StarTime = Start
+
+				};
+				Services.AssingState(Task);
+				Services.Add(Task);
+				Dispose();
+			}
+			else if (Option == 1)
+			{
+				Tasks tasks= new Tasks()
+				{
+					Description = txtDescription.Text,
+					Id = Tasks.Id,
+					EndTime = End,
+					Importance = (TaskImportance)cmbImportance.SelectedIndex,
+					StarTime = Start
+
+				};
+				Services.AssingState(tasks);
+				Services.RetrieveTask(tasks);
+				Dispose();
+			}
+		
+			
+			
 			
 		}
 

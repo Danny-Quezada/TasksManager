@@ -108,6 +108,12 @@
     <Compile Include="Forms\FrmTasks.Designer.cs">
       <DependentUpon>FrmTasks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmTasksDeleted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTasksDeleted.Designer.cs">
+      <DependentUpon>FrmTasksDeleted.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimePicker.cs">
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTasks.resx">
       <DependentUpon>FrmTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTasksDeleted.resx">
+      <DependentUpon>FrmTasksDeleted.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

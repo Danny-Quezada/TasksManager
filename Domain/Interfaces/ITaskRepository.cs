@@ -22,7 +22,9 @@ namespace Domain.Interfaces
 
 		void AssingState(Tasks t);
 
-	
+		void OrderByHours();
+		Tasks FindTaskDeleted(int Id);
+		
 
 	}
 }

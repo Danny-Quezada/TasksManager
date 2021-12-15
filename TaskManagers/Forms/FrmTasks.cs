@@ -34,7 +34,7 @@ namespace TaskManagers.Forms
 		Timer RemovalNotification = new System.Timers.Timer(1000);
 		private void FrmTasks_Load(object sender, EventArgs e)
 		{
-			AllocConsole();
+			//AllocConsole();
 			VisibleFilter();
 			lblMesDia.Text = DateTime.Now.ToString("MMMM dd, yyyy"+".",CultureInfo.InvariantCulture);
 			RemovalNotification.Elapsed += new ElapsedEventHandler(OnTimedEvent);
@@ -43,9 +43,9 @@ namespace TaskManagers.Forms
 			RemovalNotification.Enabled = true;
 		}
 
-		[DllImport("kernel32.dll", SetLastError = true)]
-		[return: MarshalAs(UnmanagedType.Bool)]
-		static extern bool AllocConsole();
+		//[DllImport("kernel32.dll", SetLastError = true)]
+		//[return: MarshalAs(UnmanagedType.Bool)]
+		//static extern bool AllocConsole();
 
 
 		private void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -96,7 +96,6 @@ namespace TaskManagers.Forms
 			RegisterTask.Services = Services;
 			RegisterTask.ShowDialog();
 			FillDGV();
-
 			RemovalNotification.Start();
 			VisibleFilter();
 
@@ -166,6 +165,7 @@ namespace TaskManagers.Forms
 			}
 			else
 			{
+				Services.OrderByHours();
 				FillDGV();
 			}
 			RemovalNotification.Start();
@@ -197,6 +197,7 @@ namespace TaskManagers.Forms
 				Tasks Task = Services.FindTask(Convert.ToInt32(guna2DataGridView1.Rows[Seleccion].Cells[0].Value));
 				Services.FinishTask(Task);
 				FillDGV();
+				VisibleFilter();
 				RemovalNotification.Start();
 				Seleccion = -1;
 			}
@@ -213,6 +214,25 @@ namespace TaskManagers.Forms
 		{
 			FrmStatistics frmStatistics = new FrmStatistics();
 			frmStatistics.ShowDialog();
+		}
+		
+		private void guna2ImageButton4_Click(object sender, EventArgs e)
+		{
+			FrmTasksDeleted frmDeleted = new FrmTasksDeleted();
+			frmDeleted.Services = Services;
+			frmDeleted.ShowDialog();
+			FillDGV();
+			RemovalNotification.Start();
+		}
+
+		private void btnClose_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void btnMinimize_Click(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Minimized;
 		}
 	}
 }

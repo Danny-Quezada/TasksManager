@@ -11,7 +11,7 @@ namespace AppCore.IServices
 		void Add(T t);
 		void Delete(T t);
 		T[] Read(int opcion);
-		int GetLastId();
 
+		int GetLastId();
 	}
 }

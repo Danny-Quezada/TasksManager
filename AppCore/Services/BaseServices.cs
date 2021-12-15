@@ -27,7 +27,7 @@ namespace AppCore.Services
 			Model.Delete(t);
 		}
 
-		public int GetLastId()
+		public virtual int GetLastId()
 		{
 			return Model.GetLastId();
 		}
@@ -36,5 +36,7 @@ namespace AppCore.Services
 		{
 			return Model.Read(opcion);
 		}
+
 	}
+
 }

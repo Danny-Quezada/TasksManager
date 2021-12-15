@@ -81,6 +81,18 @@ namespace Infraestructure.Repository
 			return null;
 		}
 
+		public Tasks FindTaskDeleted(int Id)
+		{
+			for (int i = 0; i < TasksDeleted.Count; i++)
+			{
+				if (Id == TasksDeleted[i].Id)
+				{
+					return TasksDeleted[i];
+				}
+			}
+			return null;
+		}
+
 		public void FinishTask(Tasks t)
 		{
 			if (t.State == Domain.Enum.TaskStatus.Failed)
@@ -103,9 +115,28 @@ namespace Infraestructure.Repository
 
 		}
 
+		public override int GetLastId()
+		{
+
+			try
+			{
+				//return Data.Count == 0 ? 0 : (int)Data[Data.Count - 1].GetType().GetProperty("Id").GetValue(Data[Data.Count - 1]);
+				return Data.Count + TasksDeleted.Count+1;
+			}
+			catch (Exception)
+			{
+				throw new ArgumentException("the object does not have the 'Id' property.");
+			}
+		}
+
 		public ICollection<Tasks> OrderByChoise(Func<Tasks,bool> Predicate)
 		{
 			return Data.Where(Predicate).ToList();
+		}
+
+		public void OrderByHours()
+		{
+			Data.Sort((x, y) => x.StarTime.CompareTo(y.StarTime));
 		}
 
 		public override Tasks[] Read(int opcion)
@@ -123,21 +154,16 @@ namespace Infraestructure.Repository
 
 		public void RetrieveTask(Tasks t)
 		{
-			if (TasksDeleted.Count == 0)
-			{
-				new Exception("There is no task deleted");
-				return;
-			}
-			for(int i=0; i<TasksDeleted.Count; i++)
+			for(int i=0; i < TasksDeleted.Count; i++)
 			{
 				if (t.Id == TasksDeleted[i].Id)
 				{
-					t.State = TaskStatus.Started;
+					TasksDeleted.RemoveAt(i);
 					Data.Add(t);
-					TasksDeleted.Remove(t);
 					break;
 				}
 			}
+			
 		}
 
 
@@ -169,7 +195,7 @@ namespace Infraestructure.Repository
 			}
 			if (Actualizado == false)
 			{
-				new Exception("No se pudo actualizar");
+				new Exception("Could not update.");
 			}
 		}
 	}

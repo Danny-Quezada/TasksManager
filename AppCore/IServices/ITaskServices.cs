@@ -20,7 +20,9 @@ namespace AppCore.IServices
 		ICollection<Tasks> OrderByChoise(Func<Tasks,bool> Predicate);
 		void Update(Tasks t);
 		void AssingState(Tasks t);
-		
+
+		void OrderByHours();
+		Tasks FindTaskDeleted(int Id);
 
 	}
 }

@@ -68,5 +68,19 @@ namespace AppCore.Services
 			Repository.FinishTask(t);
 		}
 
+		public void OrderByHours()
+		{
+			Repository.OrderByHours();
+		}
+
+		public Tasks FindTaskDeleted(int Id)
+		{
+			return Repository.FindTaskDeleted(Id);
+		}
+
+		public override int GetLastId()
+		{
+			return Repository.GetLastId();
+		}
 	}
 }

@@ -288,7 +288,10 @@ namespace TaskManagers.Forms
 			this.DoubleBuffered = true;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximumSize = new System.Drawing.Size(365, 537);
+			this.MinimumSize = new System.Drawing.Size(365, 537);
 			this.Name = "FrmRegisterTask";
+			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "FrmRegisterTask";
 			this.Load += new System.EventHandler(this.FrmRegisterTask_Load);
