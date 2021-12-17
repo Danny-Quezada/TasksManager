@@ -30,11 +30,17 @@ namespace TaskManagers.Forms
 
 			InitializeComponent();
 			Services = services;
+			FillDGV();
 		}
 		Timer RemovalNotification = new System.Timers.Timer(1000);
 		private void FrmTasks_Load(object sender, EventArgs e)
 		{
-			//AllocConsole();
+
+			guna2HtmlToolTip1.SetToolTip(this.guna2ImageButton1, "Create tasks");
+			guna2HtmlToolTip1.SetToolTip(this.guna2ImageButton3, "Show graphs");
+			guna2HtmlToolTip1.SetToolTip(this.guna2ImageButton4, "Show done or not done tasks");
+			guna2HtmlToolTip1.SetToolTip(this.guna2ImageButton2, "Check homework done or not done");
+			AllocConsole();
 			VisibleFilter();
 			lblMesDia.Text = DateTime.Now.ToString("MMMM dd, yyyy"+".",CultureInfo.InvariantCulture);
 			RemovalNotification.Elapsed += new ElapsedEventHandler(OnTimedEvent);
@@ -43,36 +49,43 @@ namespace TaskManagers.Forms
 			RemovalNotification.Enabled = true;
 		}
 
-		//[DllImport("kernel32.dll", SetLastError = true)]
-		//[return: MarshalAs(UnmanagedType.Bool)]
-		//static extern bool AllocConsole();
+		[DllImport("kernel32.dll", SetLastError = true)]
+		[return: MarshalAs(UnmanagedType.Bool)]
+		static extern bool AllocConsole();
 
 
 		private void OnTimedEvent(object source, ElapsedEventArgs e)
 		{
 
 
-	
 			foreach (Tasks t in Services.Read(1))
 			{
 
 				Console.WriteLine(t.EndTime.ToString("HH:mm:ss"));
 				Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
-				if (t.EndTime.ToString("HH:mm:ss").CompareTo(DateTime.Now.ToString("HH:mm:ss")) == 0)
+				if (t.EndTime.ToString("dd:HH:mm:ss").CompareTo(DateTime.Now.ToString("dd:HH:mm:ss")) < 0)
 				{
+					if (t.State != Domain.Enum.TaskStatus.Failed)
+					{
+						Services.ChangeStatus(t, Domain.Enum.TaskStatus.Failed);
+						Notification("Failed", $"Task: {t.Id} not done", "Not done");
+						FillDGV();
 
-					Services.ChangeStatus(t, Domain.Enum.TaskStatus.Failed);
-					Notification("Failed", $"Task: {t.Id} not done", "Not done");
-					FillDGV();
+					}
 
 				}
 				RemovalNotification.Start();
-		
-				if (t.StarTime.ToString("HH:mm:ss").CompareTo(DateTime.Now.ToString("HH:mm:ss")) == 0)
+
+				if (t.StarTime.ToString("dd:HH:mm:ss").CompareTo(DateTime.Now.ToString("dd:HH:mm:ss")) < 0)
 				{
-					Services.ChangeStatus(t, Domain.Enum.TaskStatus.Started);
-					Notification("Started", $"Task {t.Id} already started", "It already started");
-					FillDGV();
+					if (t.State == Domain.Enum.TaskStatus.WithoutStarting)
+					{
+
+						Services.ChangeStatus(t, Domain.Enum.TaskStatus.Started);
+						Notification("Started", $"Task {t.Id} already started", "It already started");
+						FillDGV();
+					}
+				
 				}
 				RemovalNotification.Start();
 			}
@@ -91,7 +104,7 @@ namespace TaskManagers.Forms
 
 		private void guna2ImageButton1_Click(object sender, EventArgs e)
 		{
-
+			guna2HtmlToolTip1.Active = true;
 			FrmRegisterTask RegisterTask = new FrmRegisterTask();
 			RegisterTask.Services = Services;
 			RegisterTask.ShowDialog();
@@ -139,6 +152,7 @@ namespace TaskManagers.Forms
 				}
 				i++;
 			}
+			RemovalNotification.Start();
 
 		}
 		private void FilterDGV(Func<Tasks, bool> Filter)
@@ -213,6 +227,8 @@ namespace TaskManagers.Forms
 		private void guna2ImageButton3_Click(object sender, EventArgs e)
 		{
 			FrmStatistics frmStatistics = new FrmStatistics();
+			frmStatistics.Services = Services;
+			
 			frmStatistics.ShowDialog();
 		}
 		

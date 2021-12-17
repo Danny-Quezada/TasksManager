@@ -25,6 +25,7 @@ namespace TaskManagers.Forms
 
 		private void FrmTasksDeleted_Load(object sender, EventArgs e)
 		{
+			guna2HtmlToolTip1.SetToolTip(this.guna2ImageButton1, "Redo homework");
 			FillDGV();
 		}
 		private void FillDGV()

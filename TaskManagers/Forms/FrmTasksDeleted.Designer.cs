@@ -48,6 +48,7 @@ namespace TaskManagers.Forms
 			this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
 			this.btnMinimize = new System.Windows.Forms.PictureBox();
 			this.btnClose = new System.Windows.Forms.PictureBox();
+			this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
 			((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -228,6 +229,11 @@ namespace TaskManagers.Forms
 			this.btnClose.TabStop = false;
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
+			// guna2HtmlToolTip1
+			// 
+			this.guna2HtmlToolTip1.AllowLinksHandling = true;
+			this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
+			// 
 			// FrmTasksDeleted
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,5 +276,6 @@ namespace TaskManagers.Forms
 		private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
 		private System.Windows.Forms.PictureBox btnMinimize;
 		private System.Windows.Forms.PictureBox btnClose;
+		private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
 	}
 }

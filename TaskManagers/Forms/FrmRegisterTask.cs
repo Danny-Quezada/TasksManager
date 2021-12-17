@@ -21,7 +21,8 @@ namespace TaskManagers.Forms
 		public FrmRegisterTask(int option,Tasks tasks)
 		{
 			InitializeComponent();
-
+			dateTimePicker1.Format = DateTimePickerFormat.Custom;
+			dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
 			this.Tasks = tasks;
 			this.Option = option;
 		
@@ -138,7 +139,7 @@ namespace TaskManagers.Forms
 				{
 					Description = txtDescription.Text,
 					Id = Tasks.Id,
-					EndTime = End,
+					EndTime = dateTimePicker1.Value,
 					Importance = (TaskImportance)cmbImportance.SelectedIndex,
 					StarTime = Start
 
@@ -159,6 +160,11 @@ namespace TaskManagers.Forms
 		}
 
 		private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
 		{
 
 		}

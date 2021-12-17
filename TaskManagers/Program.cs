@@ -22,7 +22,8 @@ namespace TaskManagers
 		{
 			var builder = new ContainerBuilder();
 
-			builder.RegisterType<TasksListRepository>().As<ITaskRepository>();
+			//builder.RegisterType<TasksListRepository>().As<ITaskRepository>();
+			builder.RegisterType<TasksMongoDBRepository>().As<ITaskRepository>();
 			builder.RegisterType<TaskServices>().As<ITaskServices>();
 			Application.EnableVisualStyles();
 

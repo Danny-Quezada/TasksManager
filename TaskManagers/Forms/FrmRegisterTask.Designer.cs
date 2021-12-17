@@ -47,6 +47,7 @@ namespace TaskManagers.Forms
 			this.label2 = new System.Windows.Forms.Label();
 			this.TPEnd = new PruebaCustom.TimePicker();
 			this.TPStart = new PruebaCustom.TimePicker();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.guna2GradientPanel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -268,6 +269,14 @@ namespace TaskManagers.Forms
 			this.TPStart.VerificarHora = false;
 			this.TPStart.VerificarMinutos = false;
 			// 
+			// dateTimePicker1
+			// 
+			this.dateTimePicker1.Location = new System.Drawing.Point(268, 232);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(92, 20);
+			this.dateTimePicker1.TabIndex = 13;
+			this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+			// 
 			// FrmRegisterTask
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +284,7 @@ namespace TaskManagers.Forms
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(365, 537);
+			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.TPEnd);
 			this.Controls.Add(this.TPStart);
 			this.Controls.Add(this.btnAdd);
@@ -323,5 +333,6 @@ namespace TaskManagers.Forms
 		private PruebaCustom.TimePicker TPStart;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.DateTimePicker dateTimePicker1;
 	}
 }
