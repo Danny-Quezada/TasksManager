@@ -35,6 +35,7 @@ namespace TaskManagers.Forms
 			this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
 			this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
 			this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+			this.btnClose = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -47,8 +48,9 @@ namespace TaskManagers.Forms
 			this.label2 = new System.Windows.Forms.Label();
 			this.TPEnd = new PruebaCustom.TimePicker();
 			this.TPStart = new PruebaCustom.TimePicker();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
 			this.guna2GradientPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -77,6 +79,7 @@ namespace TaskManagers.Forms
 			this.guna2GradientPanel1.BorderRadius = 100;
 			this.guna2GradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
 			this.guna2GradientPanel1.BorderThickness = 29;
+			this.guna2GradientPanel1.Controls.Add(this.btnClose);
 			this.guna2GradientPanel1.Controls.Add(this.label1);
 			this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
 			this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -87,7 +90,19 @@ namespace TaskManagers.Forms
 			this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
 			this.guna2GradientPanel1.Size = new System.Drawing.Size(426, 134);
 			this.guna2GradientPanel1.TabIndex = 1;
-			this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
+			// 
+			// btnClose
+			// 
+			this.btnClose.BackColor = System.Drawing.Color.Transparent;
+			this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+			this.btnClose.Location = new System.Drawing.Point(360, 39);
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Size = new System.Drawing.Size(24, 19);
+			this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.btnClose.TabIndex = 14;
+			this.btnClose.TabStop = false;
+			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
 			// label1
 			// 
@@ -144,7 +159,6 @@ namespace TaskManagers.Forms
 			this.txtDescription.ShadowDecoration.Parent = this.txtDescription;
 			this.txtDescription.Size = new System.Drawing.Size(232, 96);
 			this.txtDescription.TabIndex = 2;
-			this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
 			// 
 			// pictureBox2
 			// 
@@ -201,6 +215,7 @@ namespace TaskManagers.Forms
 			// 
 			this.btnAdd.BorderRadius = 18;
 			this.btnAdd.CheckedState.Parent = this.btnAdd;
+			this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnAdd.CustomImages.Parent = this.btnAdd;
 			this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
 			this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -269,13 +284,10 @@ namespace TaskManagers.Forms
 			this.TPStart.VerificarHora = false;
 			this.TPStart.VerificarMinutos = false;
 			// 
-			// dateTimePicker1
+			// guna2HtmlToolTip1
 			// 
-			this.dateTimePicker1.Location = new System.Drawing.Point(268, 232);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(92, 20);
-			this.dateTimePicker1.TabIndex = 13;
-			this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+			this.guna2HtmlToolTip1.AllowLinksHandling = true;
+			this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
 			// 
 			// FrmRegisterTask
 			// 
@@ -284,7 +296,6 @@ namespace TaskManagers.Forms
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(365, 537);
-			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.TPEnd);
 			this.Controls.Add(this.TPStart);
 			this.Controls.Add(this.btnAdd);
@@ -307,6 +318,7 @@ namespace TaskManagers.Forms
 			this.Load += new System.EventHandler(this.FrmRegisterTask_Load);
 			this.guna2GradientPanel1.ResumeLayout(false);
 			this.guna2GradientPanel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -333,6 +345,7 @@ namespace TaskManagers.Forms
 		private PruebaCustom.TimePicker TPStart;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.PictureBox btnClose;
+		private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
 	}
 }

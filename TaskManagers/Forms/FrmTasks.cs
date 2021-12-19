@@ -2,6 +2,7 @@
 using AppCore.Services;
 using Domain;
 using Domain.Enum;
+using Infraestructure.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,7 @@ namespace TaskManagers.Forms
 			guna2HtmlToolTip1.SetToolTip(this.guna2ImageButton3, "Show graphs");
 			guna2HtmlToolTip1.SetToolTip(this.guna2ImageButton4, "Show done or not done tasks");
 			guna2HtmlToolTip1.SetToolTip(this.guna2ImageButton2, "Check homework done or not done");
-			AllocConsole();
+			//AllocConsole();
 			VisibleFilter();
 			lblMesDia.Text = DateTime.Now.ToString("MMMM dd, yyyy"+".",CultureInfo.InvariantCulture);
 			RemovalNotification.Elapsed += new ElapsedEventHandler(OnTimedEvent);
@@ -49,9 +50,9 @@ namespace TaskManagers.Forms
 			RemovalNotification.Enabled = true;
 		}
 
-		[DllImport("kernel32.dll", SetLastError = true)]
-		[return: MarshalAs(UnmanagedType.Bool)]
-		static extern bool AllocConsole();
+		//[DllImport("kernel32.dll", SetLastError = true)]
+		//[return: MarshalAs(UnmanagedType.Bool)]
+		//static extern bool AllocConsole();
 
 
 		private void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -111,7 +112,7 @@ namespace TaskManagers.Forms
 			FillDGV();
 			RemovalNotification.Start();
 			VisibleFilter();
-
+		
 
 		}
 		private void Notification(string text, string balloonTip, string title)
@@ -121,6 +122,7 @@ namespace TaskManagers.Forms
 			notifyIcon1.BalloonTipText = balloonTip;
 			notifyIcon1.BalloonTipTitle = title;
 			notifyIcon1.ShowBalloonTip(50);
+			
 		}
 		private void VisibleFilter()
 		{
@@ -160,6 +162,11 @@ namespace TaskManagers.Forms
 			RemovalNotification.Stop();
 			guna2DataGridView1.Rows.Clear();
 			int i = 0;
+
+			if (Services.OrderByChoise(Filter) == null)
+			{
+				return;
+			}
 			foreach (Tasks t in Services.OrderByChoise(Filter))
 			{
 				guna2DataGridView1.Rows.Add(t.Id, t.Description, t.Importance, t.State, $"{t.StarTime.Hour}:{t.StarTime.Minute}", $"{t.EndTime.Hour}:{t.EndTime.Minute}");
@@ -250,5 +257,21 @@ namespace TaskManagers.Forms
 		{
 			this.WindowState = FormWindowState.Minimized;
 		}
+
+		private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+		{
+
+		}
+
+		private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Normal;
+		}
+
+		private void notifyIcon1_Click(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Normal;
+		}
+
 	}
 }

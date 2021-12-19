@@ -21,8 +21,7 @@ namespace TaskManagers.Forms
 		public FrmRegisterTask(int option,Tasks tasks)
 		{
 			InitializeComponent();
-			dateTimePicker1.Format = DateTimePickerFormat.Custom;
-			dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+			
 			this.Tasks = tasks;
 			this.Option = option;
 		
@@ -40,6 +39,10 @@ namespace TaskManagers.Forms
 				cmbImportance.SelectedIndex = (int)Tasks.Importance;
 			}
 
+			guna2HtmlToolTip1.SetToolTip(this.pictureBox2, "Description of the task");
+			guna2HtmlToolTip1.SetToolTip(this.pictureBox3, "Importance of task");
+			
+			
 
 		}
 
@@ -69,21 +72,6 @@ namespace TaskManagers.Forms
 				MessageBox.Show("None of the fields can be empty.", "General information",MessageBoxButtons.OK,MessageBoxIcon.Information);
 				return;
 			}
-			//if (dtpStart.Value == dtpEnd.Value)
-			//{
-			//	MessageBox.Show("You have to change the hours.", "Time information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			//	return;
-			//}
-			//else if (dtpStart.Value > dtpEnd.Value)
-			//{
-			//	MessageBox.Show("You cannot put the end time less than the start time", "Time information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			//	return;
-			//}
-			//else if (dtpEnd.Value < DateTime.Now)
-			//{
-			//	MessageBox.Show($"You cannot put a final hour less than the hour: {DateTime.Now.ToString("HH:mm:ss")}", "Time information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			//	return;
-			//}
 			if (TPStart.VerifarAMPM == false || TPEnd.VerifarAMPM == false)
 			{
 				MessageBox.Show("Choose between AM or PM.");
@@ -118,55 +106,36 @@ namespace TaskManagers.Forms
 				return;
 			}
 
+			Tasks Task = new Tasks()
+			{
+				Description = txtDescription.Text,
+				Id = Services.GetLastId(),
+				EndTime = End,
+				Importance = (TaskImportance)cmbImportance.SelectedIndex,
+				StarTime = Start
+
+			};
+			Services.AssingState(Task);
 			if (Option == 0)
 			{
-				Tasks Task = new Tasks()
-				{
-					Description = txtDescription.Text,
-					Id = Services.GetLastId(),
-					EndTime = End,
-					Importance = (TaskImportance)cmbImportance.SelectedIndex,
-					StarTime = Start
-
-				};
-				Services.AssingState(Task);
+				
 				Services.Add(Task);
-				Dispose();
 			}
 			else if (Option == 1)
 			{
-				Tasks tasks= new Tasks()
-				{
-					Description = txtDescription.Text,
-					Id = Tasks.Id,
-					EndTime = dateTimePicker1.Value,
-					Importance = (TaskImportance)cmbImportance.SelectedIndex,
-					StarTime = Start
-
-				};
-				Services.AssingState(tasks);
-				Services.RetrieveTask(tasks);
-				Dispose();
+				Task.Id = Tasks.Id;
+				Services.RetrieveTask(Task);
+				
 			}
-		
+			Dispose();
 			
 			
 			
 		}
 
-		private void txtDescription_TextChanged(object sender, EventArgs e)
+		private void btnClose_Click(object sender, EventArgs e)
 		{
-
-		}
-
-		private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
-		{
-
-		}
-
-		private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-		{
-
+			this.Close();
 		}
 	}
 }

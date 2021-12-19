@@ -30,10 +30,10 @@ namespace TaskManagers.Forms
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTasksDeleted));
 			this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
 			this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
@@ -70,8 +70,8 @@ namespace TaskManagers.Forms
 			// 
 			this.guna2DataGridView1.AllowUserToAddRows = false;
 			this.guna2DataGridView1.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-			this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+			this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -81,14 +81,14 @@ namespace TaskManagers.Forms
 			this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.guna2DataGridView1.ColumnHeadersHeight = 59;
 			this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TasksN,
@@ -97,14 +97,14 @@ namespace TaskManagers.Forms
             this.State,
             this.Start,
             this.End});
-			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
 			this.guna2DataGridView1.EnableHeadersVisualStyles = false;
 			this.guna2DataGridView1.GridColor = System.Drawing.Color.White;
 			this.guna2DataGridView1.Location = new System.Drawing.Point(13, 14);
@@ -113,12 +113,12 @@ namespace TaskManagers.Forms
 			this.guna2DataGridView1.ReadOnly = true;
 			this.guna2DataGridView1.RowHeadersVisible = false;
 			this.guna2DataGridView1.RowHeadersWidth = 62;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
 			this.guna2DataGridView1.RowTemplate.DividerHeight = 2;
 			this.guna2DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.guna2DataGridView1.Size = new System.Drawing.Size(710, 400);
+			this.guna2DataGridView1.Size = new System.Drawing.Size(710, 422);
 			this.guna2DataGridView1.TabIndex = 6;
 			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
 			this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -147,6 +147,7 @@ namespace TaskManagers.Forms
 			// 
 			this.TasksN.FillWeight = 60F;
 			this.TasksN.HeaderText = "Task N";
+			this.TasksN.MinimumWidth = 6;
 			this.TasksN.Name = "TasksN";
 			this.TasksN.ReadOnly = true;
 			// 
@@ -154,30 +155,35 @@ namespace TaskManagers.Forms
 			// 
 			this.Descripcion.FillWeight = 150F;
 			this.Descripcion.HeaderText = "Description";
+			this.Descripcion.MinimumWidth = 6;
 			this.Descripcion.Name = "Descripcion";
 			this.Descripcion.ReadOnly = true;
 			// 
 			// Importancia
 			// 
 			this.Importancia.HeaderText = "Importance";
+			this.Importancia.MinimumWidth = 6;
 			this.Importancia.Name = "Importancia";
 			this.Importancia.ReadOnly = true;
 			// 
 			// State
 			// 
 			this.State.HeaderText = "State";
+			this.State.MinimumWidth = 6;
 			this.State.Name = "State";
 			this.State.ReadOnly = true;
 			// 
 			// Start
 			// 
 			this.Start.HeaderText = "Start";
+			this.Start.MinimumWidth = 6;
 			this.Start.Name = "Start";
 			this.Start.ReadOnly = true;
 			// 
 			// End
 			// 
 			this.End.HeaderText = "End";
+			this.End.MinimumWidth = 6;
 			this.End.Name = "End";
 			this.End.ReadOnly = true;
 			// 
@@ -191,7 +197,7 @@ namespace TaskManagers.Forms
 			this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
 			this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
 			this.guna2ImageButton1.ImageRotate = 0F;
-			this.guna2ImageButton1.Location = new System.Drawing.Point(730, 93);
+			this.guna2ImageButton1.Location = new System.Drawing.Point(743, 98);
 			this.guna2ImageButton1.Name = "guna2ImageButton1";
 			this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;

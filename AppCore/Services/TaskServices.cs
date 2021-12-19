@@ -14,12 +14,24 @@ namespace AppCore.Services
 	public class TaskServices : BaseServices<Tasks>,ITaskServices
 	{
 		private ITaskRepository Repository;
+		private static ITaskRepository Services;
+
+		private static TaskServices _Instace;
+		public TaskServices GetInstance()
+		{
+			if (_Instace == null)
+			{
+				_Instace = new TaskServices(Repository);
+			}
+			return _Instace;
+		}
 
 		public TaskServices(ITaskRepository repository) : base(repository)
 		{
 			this.Repository = repository;
 		}
 
+	
 		public void ChangeImportance(Tasks t, TaskImportance Importance)
 		{
 			Repository.ChangeImportance( t,Importance);

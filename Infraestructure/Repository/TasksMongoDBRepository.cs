@@ -4,6 +4,7 @@ using Domain.Interfaces;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace Infraestructure.Repository
 		private IMongoCollection<Tasks> TasksDeleted;
 		public TasksMongoDBRepository()
 		{
+			
 			var client = new MongoClient();
 			db = client.GetDatabase("Tasks");
 			Data = db.GetCollection<Tasks>("Data");
@@ -130,12 +132,23 @@ namespace Infraestructure.Repository
 
 		public ICollection<Tasks> OrderByChoise(Func<Tasks, bool> Predicate)
 		{
-			throw new NotImplementedException();
+
+			try
+			{
+				return null;
+			}
+			catch (Exception)
+			{
+				throw new ArgumentException("We don't have this functionality yet.");
+			}
 		}
 
 		public void OrderByHours()
 		{
-			throw new NotImplementedException();
+
+			var filter = Builders<Tasks>.Filter.Exists("StarTime");
+			var sort = Builders<Tasks>.Sort.Ascending("StarTime");
+			Data.Find(filter).Sort(sort);
 		}
 
 		public Tasks[] Read(int opcion)
@@ -155,6 +168,8 @@ namespace Infraestructure.Repository
 		{
 			var filter = Builders<Tasks>.Filter.Eq("Id", t.Id);
 			TasksDeleted.DeleteOne(filter);
+			t.StarTime = t.StarTime.AddHours(-6);
+			t.EndTime = t.EndTime.AddHours(-6);
 			Data.InsertOne(t);
 			
 		}

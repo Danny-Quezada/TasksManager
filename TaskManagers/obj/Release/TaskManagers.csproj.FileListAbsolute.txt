@@ -1,0 +1,70 @@
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\libzstd.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\snappy32.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\snappy64.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\libsnappy64.so
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\libzstd.so
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\libsnappy64.dylib
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\libzstd.dylib
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\mongocrypt.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Task Manager.exe.config
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Task Manager.exe.manifest
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Task Manager.application
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Task Manager.exe
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Task Manager.pdb
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\AppCore.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Autofac.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\DnsClient.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Domain.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Guna.Charts.WinForms.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Guna.UI2.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Infraestructure.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\MongoDB.Bson.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\MongoDB.Driver.Core.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\MongoDB.Driver.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\MongoDB.Libmongocrypt.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\RJCodeAdvance.RJControls.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\SharpCompress.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Buffers.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Diagnostics.DiagnosticSource.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Memory.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Numerics.Vectors.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Text.Encoding.CodePages.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Threading.Tasks.Extensions.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Tulpep.NotificationWindow.dll
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\AppCore.pdb
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\AppCore.dll.config
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Domain.pdb
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Domain.dll.config
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Infraestructure.pdb
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Infraestructure.dll.config
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Autofac.pdb
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Autofac.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\DnsClient.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\MongoDB.Bson.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\MongoDB.Driver.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\MongoDB.Driver.Core.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Buffers.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Diagnostics.DiagnosticSource.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Memory.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Numerics.Vectors.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Text.Encoding.CodePages.xml
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Release\System.Threading.Tasks.Extensions.xml
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.csproj.AssemblyReference.cache
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.Forms.FrmMessageBox.resources
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.Forms.FrmRegisterTask.resources
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.Forms.FrmStatistics.resources
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.Forms.FrmTasks.resources
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.Forms.FrmTasksDeleted.resources
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.Properties.Resources.resources
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\PruebaCustom.TimePicker.resources
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.csproj.GenerateResource.cache
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.csproj.CoreCompileInputs.cache
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\Task Manager.exe.manifest
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\Task Manager.application
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\TaskManagers.csproj.CopyComplete
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\Task Manager.exe
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Release\Task Manager.pdb

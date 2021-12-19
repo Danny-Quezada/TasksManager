@@ -13,7 +13,7 @@ namespace Domain
 {
 	public class Tasks
 	{
-		[BsonElement]
+		
 		public int Id { get; set; }
 		[BsonRepresentation(BsonType.Document)]
 		public DateTime StarTime { get; set; }

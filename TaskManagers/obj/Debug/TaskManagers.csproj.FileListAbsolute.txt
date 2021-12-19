@@ -66,9 +66,11 @@ E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\libzstd.so
 E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\libsnappy64.dylib
 E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\libzstd.dylib
 E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\mongocrypt.dll
-E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\TaskManagers.exe.config
-E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\TaskManagers.exe
-E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\TaskManagers.pdb
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Task Manager.exe.config
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Task Manager.exe.manifest
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Task Manager.application
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Task Manager.exe
+E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Task Manager.pdb
 E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\AppCore.dll
 E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\Autofac.dll
 E:\ProyectosC#\TasksManager\TaskManagers\bin\Debug\DnsClient.dll
@@ -121,6 +123,8 @@ E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\TaskManagers.Properties.Resou
 E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\PruebaCustom.TimePicker.resources
 E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\TaskManagers.csproj.GenerateResource.cache
 E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\TaskManagers.csproj.CoreCompileInputs.cache
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\Task Manager.exe.manifest
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\Task Manager.application
 E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\TaskManagers.csproj.CopyComplete
-E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\TaskManagers.exe
-E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\TaskManagers.pdb
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\Task Manager.exe
+E:\ProyectosC#\TasksManager\TaskManagers\obj\Debug\Task Manager.pdb

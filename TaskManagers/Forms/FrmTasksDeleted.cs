@@ -20,6 +20,7 @@ namespace TaskManagers.Forms
 		private int Seleccion = -1;
 		public FrmTasksDeleted()
 		{
+			
 			InitializeComponent();
 		}
 
@@ -51,9 +52,11 @@ namespace TaskManagers.Forms
 			if (Seleccion >= 0)
 			{
 				Tasks Task = Services.FindTaskDeleted(Convert.ToInt32(guna2DataGridView1.Rows[Seleccion].Cells[0].Value));
+
 				FrmRegisterTask Register = new FrmRegisterTask(1,Task);
 				Register.Services = Services;
 				Register.ShowDialog();
+
 				FillDGV();
 				Seleccion = -1;
 			}

@@ -30,10 +30,10 @@ namespace TaskManagers.Forms
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTasks));
 			this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
 			this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
@@ -51,13 +51,12 @@ namespace TaskManagers.Forms
 			this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
 			this.pbChoose = new System.Windows.Forms.PictureBox();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-			this.guna2ShapesTool1 = new Guna.UI2.WinForms.Guna2ShapesTool(this.components);
 			this.lblMesDia = new System.Windows.Forms.Label();
 			this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
 			this.btnClose = new System.Windows.Forms.PictureBox();
 			this.btnMinimize = new System.Windows.Forms.PictureBox();
-			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+			this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbChoose)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -88,7 +87,7 @@ namespace TaskManagers.Forms
 			this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
 			this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
 			this.guna2ImageButton1.ImageRotate = 0F;
-			this.guna2ImageButton1.Location = new System.Drawing.Point(988, 115);
+			this.guna2ImageButton1.Location = new System.Drawing.Point(997, 115);
 			this.guna2ImageButton1.Name = "guna2ImageButton1";
 			this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
@@ -106,8 +105,8 @@ namespace TaskManagers.Forms
 			// 
 			this.guna2DataGridView1.AllowUserToAddRows = false;
 			this.guna2DataGridView1.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-			this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+			this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
 			this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -117,14 +116,14 @@ namespace TaskManagers.Forms
 			this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+			dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
 			this.guna2DataGridView1.ColumnHeadersHeight = 59;
 			this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TasksN,
@@ -133,14 +132,14 @@ namespace TaskManagers.Forms
             this.State,
             this.Start,
             this.End});
-			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+			dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
 			this.guna2DataGridView1.EnableHeadersVisualStyles = false;
 			this.guna2DataGridView1.GridColor = System.Drawing.Color.White;
 			this.guna2DataGridView1.Location = new System.Drawing.Point(13, 51);
@@ -149,8 +148,8 @@ namespace TaskManagers.Forms
 			this.guna2DataGridView1.ReadOnly = true;
 			this.guna2DataGridView1.RowHeadersVisible = false;
 			this.guna2DataGridView1.RowHeadersWidth = 62;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle16;
 			this.guna2DataGridView1.RowTemplate.DividerHeight = 2;
 			this.guna2DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -221,6 +220,7 @@ namespace TaskManagers.Forms
 			// guna2ImageButton2
 			// 
 			this.guna2ImageButton2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.guna2ImageButton2.BackColor = System.Drawing.Color.Transparent;
 			this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
 			this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -229,18 +229,19 @@ namespace TaskManagers.Forms
 			this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
 			this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
 			this.guna2ImageButton2.ImageRotate = 0F;
-			this.guna2ImageButton2.Location = new System.Drawing.Point(974, 211);
+			this.guna2ImageButton2.Location = new System.Drawing.Point(996, 211);
 			this.guna2ImageButton2.Name = "guna2ImageButton2";
 			this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
 			this.guna2ImageButton2.ShadowDecoration.Parent = this.guna2ImageButton2;
-			this.guna2ImageButton2.Size = new System.Drawing.Size(111, 112);
+			this.guna2ImageButton2.Size = new System.Drawing.Size(89, 112);
 			this.guna2ImageButton2.TabIndex = 4;
 			this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
 			// 
 			// guna2ImageButton3
 			// 
 			this.guna2ImageButton3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.guna2ImageButton3.BackColor = System.Drawing.Color.Transparent;
 			this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton3.CheckedState.Parent = this.guna2ImageButton3;
 			this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -249,12 +250,12 @@ namespace TaskManagers.Forms
 			this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
 			this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
 			this.guna2ImageButton3.ImageRotate = 0F;
-			this.guna2ImageButton3.Location = new System.Drawing.Point(979, 320);
+			this.guna2ImageButton3.Location = new System.Drawing.Point(997, 329);
 			this.guna2ImageButton3.Name = "guna2ImageButton3";
 			this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton3.PressedState.Parent = this.guna2ImageButton3;
 			this.guna2ImageButton3.ShadowDecoration.Parent = this.guna2ImageButton3;
-			this.guna2ImageButton3.Size = new System.Drawing.Size(97, 112);
+			this.guna2ImageButton3.Size = new System.Drawing.Size(88, 112);
 			this.guna2ImageButton3.TabIndex = 6;
 			this.guna2ImageButton3.Click += new System.EventHandler(this.guna2ImageButton3_Click);
 			// 
@@ -306,15 +307,10 @@ namespace TaskManagers.Forms
 			this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
 			this.notifyIcon1.Text = "Tasks";
 			this.notifyIcon1.Visible = true;
+			this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
+			this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
 			this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
-			// 
-			// guna2ShapesTool1
-			// 
-			this.guna2ShapesTool1.Location = new System.Drawing.Point(0, 0);
-			this.guna2ShapesTool1.PolygonSkip = 1;
-			this.guna2ShapesTool1.Rotate = 0F;
-			this.guna2ShapesTool1.Size = new System.Drawing.Size(200, 200);
-			this.guna2ShapesTool1.TargetControl = null;
+			this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
 			// 
 			// lblMesDia
 			// 
@@ -337,7 +333,7 @@ namespace TaskManagers.Forms
 			this.guna2ImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton4.Image")));
 			this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
 			this.guna2ImageButton4.ImageRotate = 0F;
-			this.guna2ImageButton4.Location = new System.Drawing.Point(988, 438);
+			this.guna2ImageButton4.Location = new System.Drawing.Point(997, 447);
 			this.guna2ImageButton4.Name = "guna2ImageButton4";
 			this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
 			this.guna2ImageButton4.PressedState.Parent = this.guna2ImageButton4;
@@ -374,6 +370,10 @@ namespace TaskManagers.Forms
 			// 
 			this.guna2HtmlToolTip1.AllowLinksHandling = true;
 			this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
+			// 
+			// guna2AnimateWindow1
+			// 
+			this.guna2AnimateWindow1.TargetForm = this;
 			// 
 			// FrmTasks
 			// 
@@ -425,12 +425,11 @@ namespace TaskManagers.Forms
 		private System.Windows.Forms.PictureBox pbChoose;
 		private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
 		private System.Windows.Forms.NotifyIcon notifyIcon1;
-		private Guna.UI2.WinForms.Guna2ShapesTool guna2ShapesTool1;
 		private System.Windows.Forms.Label lblMesDia;
 		private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
 		private System.Windows.Forms.PictureBox btnMinimize;
 		private System.Windows.Forms.PictureBox btnClose;
-		private System.Windows.Forms.ToolTip toolTip1;
 		private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
+		private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
 	}
 }
