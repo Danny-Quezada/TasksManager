@@ -133,22 +133,12 @@ namespace Infraestructure.Repository
 		public ICollection<Tasks> OrderByChoise(Func<Tasks, bool> Predicate)
 		{
 
-			try
-			{
-				return null;
-			}
-			catch (Exception)
-			{
-				throw new ArgumentException("We don't have this functionality yet.");
-			}
+			return Read(1).Where(Predicate).ToList();
 		}
 
 		public void OrderByHours()
 		{
-
-			var filter = Builders<Tasks>.Filter.Exists("StarTime");
-			var sort = Builders<Tasks>.Sort.Ascending("StarTime");
-			Data.Find(filter).Sort(sort);
+			db.GetCollection<Tasks>("Data").Find(x => true).SortByDescending(x=>x.StarTime);	
 		}
 
 		public Tasks[] Read(int opcion)
@@ -177,8 +167,8 @@ namespace Infraestructure.Repository
 		public Tasks TaskById(int id)
 		{
 			var filter = Builders<Tasks>.Filter.Eq("Id", id);
-			var a = Data.Find(filter).ToList();
-			return a[0];
+			var a = Data.Find(null,filter);
+			return a.Single();
 		}
 
 		public void Update(Tasks t)
