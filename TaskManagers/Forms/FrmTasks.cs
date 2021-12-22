@@ -163,10 +163,6 @@ namespace TaskManagers.Forms
 			guna2DataGridView1.Rows.Clear();
 			int i = 0;
 
-			if (Services.OrderByChoise(Filter) == null)
-			{
-				return;
-			}
 			foreach (Tasks t in Services.OrderByChoise(Filter))
 			{
 				guna2DataGridView1.Rows.Add(t.Id, t.Description, t.Importance, t.State, $"{t.StarTime.Hour}:{t.StarTime.Minute}", $"{t.EndTime.Hour}:{t.EndTime.Minute}");

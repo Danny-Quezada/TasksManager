@@ -16,12 +16,14 @@ namespace Infraestructure.Repository
 	{
 		
 		private IMongoDatabase db;
-
 		private IMongoCollection<Tasks> Data;
+		bool Confirmation = false;
+		List<Tasks> Tasks;
+		
 		private IMongoCollection<Tasks> TasksDeleted;
 		public TasksMongoDBRepository()
 		{
-			
+			Tasks = new List<Tasks>();
 			var client = new MongoClient();
 			db = client.GetDatabase("Tasks");
 			Data = db.GetCollection<Tasks>("Data");
@@ -33,7 +35,7 @@ namespace Infraestructure.Repository
 			DateTime end = t.EndTime.AddHours(-6);
 			t.StarTime = Start;
 			t.EndTime = end;
-			Data.InsertOne(t);
+			Data.InsertOne(t); 
 		}
 
 		public void AssingState(Tasks t)
@@ -105,7 +107,7 @@ namespace Infraestructure.Repository
 				var filter = Builders<Tasks>.Filter.Eq("Id", t.Id);
 				Data.DeleteOne(filter);
 				t.State = TaskStatus.Finished;
-				TasksDeleted.InsertOne(t); // Podre separar las tareas hechas como las no hechas para los graficos. con LinQ (sum)
+				TasksDeleted.InsertOne(t); 
 			}
 			else if (t.State == Domain.Enum.TaskStatus.WithoutStarting)
 			{
@@ -121,7 +123,7 @@ namespace Infraestructure.Repository
 
 			try
 			{
-				//return Data.Count == 0 ? 0 : (int)Data[Data.Count - 1].GetType().GetProperty("Id").GetValue(Data[Data.Count - 1]);
+				
 				return Read(1).Length + Read(2).Length + 1;
 			}
 			catch (Exception)
@@ -138,14 +140,24 @@ namespace Infraestructure.Repository
 
 		public void OrderByHours()
 		{
-			db.GetCollection<Tasks>("Data").Find(x => true).SortByDescending(x=>x.StarTime);	
+			Confirmation = true;
 		}
 
 		public Tasks[] Read(int opcion)
 		{
 			if (opcion == 1)
 			{
-				return Data.Find(x => true).ToList().ToArray();
+				if (Confirmation == true)
+				{
+					Tasks = Data.Find(x => true).ToList();
+					Tasks.Sort((x, y) => x.StarTime.Hour.CompareTo(y.StarTime.Hour));
+					return Tasks.ToArray();
+				}
+				else
+				{
+					return Data.Find(x => true).ToList().ToArray();
+				}
+			
 			}
 			else if (opcion == 2)
 			{
