@@ -127,7 +127,7 @@ namespace TaskManagers.Forms
 				Services.RetrieveTask(Task);
 				
 			}
-			Dispose();
+			this.Close();
 			
 			
 			

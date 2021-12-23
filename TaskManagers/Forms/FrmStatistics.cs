@@ -25,13 +25,13 @@ namespace TaskManagers.Forms
 		private void FrmStatistics_Load(object sender, EventArgs e)
 			
 		{
-			GeneratePieChart();
-			
 		}
 
 		private void gunaChart1_Load(object sender, EventArgs e)
 		{
-			
+
+			GeneratePieChart();
+
 		}
 		private void GeneratePieChart()
 		{

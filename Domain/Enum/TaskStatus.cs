@@ -11,6 +11,7 @@ namespace Domain.Enum
 		Finished,
 		WithoutStarting,
 		Started,
-		Failed
+		Failed,
+		Warning
 	}
 }

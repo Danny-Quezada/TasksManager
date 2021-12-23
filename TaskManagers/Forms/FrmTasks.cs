@@ -58,24 +58,35 @@ namespace TaskManagers.Forms
 		private void OnTimedEvent(object source, ElapsedEventArgs e)
 		{
 
-
+			
 			foreach (Tasks t in Services.Read(1))
 			{
-
+				
 				Console.WriteLine(t.EndTime.ToString("HH:mm:ss"));
 				Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
+				
 				if (t.EndTime.ToString("dd:HH:mm:ss").CompareTo(DateTime.Now.ToString("dd:HH:mm:ss")) < 0)
 				{
+					
 					if (t.State != Domain.Enum.TaskStatus.Failed)
 					{
-						Services.ChangeStatus(t, Domain.Enum.TaskStatus.Failed);
-						Notification("Failed", $"Task: {t.Id} not done", "Not done");
-						FillDGV();
+						if (t.State != Domain.Enum.TaskStatus.Warning)
+						{
+							Notification("Warning", "You have 1 minute to check it and mark it as done", $"Task {t.Id} reached the estimated time");
+							Services.ChangeStatus(t, Domain.Enum.TaskStatus.Warning);
+							FillDGV();
 
+						}
+						if (t.EndTime.AddMinutes(1).ToString("HH:mm:ss").CompareTo(DateTime.Now.ToString("HH:mm:ss")) < 0)
+						{
+							Services.ChangeStatus(t, Domain.Enum.TaskStatus.Failed);
+							Notification("Failed", $"Task: {t.Id} not done", "Not done");
+							FillDGV();
+						}
 					}
 
 				}
-				RemovalNotification.Start();
+					RemovalNotification.Start();
 
 				if (t.StarTime.ToString("dd:HH:mm:ss").CompareTo(DateTime.Now.ToString("dd:HH:mm:ss")) < 0)
 				{
@@ -152,6 +163,7 @@ namespace TaskManagers.Forms
 				{
 					guna2DataGridView1.Rows[i].DefaultCellStyle.ForeColor = Color.Red;
 				}
+				
 				i++;
 			}
 			RemovalNotification.Start();

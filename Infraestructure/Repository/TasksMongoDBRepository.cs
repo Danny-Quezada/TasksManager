@@ -116,6 +116,14 @@ namespace Infraestructure.Repository
 				t.State = Domain.Enum.TaskStatus.Failed;
 				TasksDeleted.InsertOne(t);
 			}
+			else if (t.State == Domain.Enum.TaskStatus.Warning)
+			{
+
+				var filter = Builders<Tasks>.Filter.Eq("Id", t.Id);
+				Data.DeleteOne(filter);
+				t.State = TaskStatus.Finished;
+				TasksDeleted.InsertOne(t);
+			}
 		}
 
 		public int GetLastId()

@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KxikpSN8rUMopQxytS7knLpoN9COFO3R28H6mZxZJZA=</dsig:DigestValue>
+        <dsig:DigestValue>KAnn5T12cUM/296mszyzQe7kVRMufHA192W+4vlqFvM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -122,7 +122,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sYqgdlQHrT2bTJrTR3xoADtmC0pun9DnNJq9fVPyyJk=</dsig:DigestValue>
+        <dsig:DigestValue>PUKt9Wr5ya6lAzNnah4YI5DTNkt4f/VRNCIMTvzjru8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -295,14 +295,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Task Manager.exe" size="614384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Task Manager.exe" size="614896">
       <assemblyIdentity name="Task Manager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8ov8AwiDgP9yS7dux3PinHXPH6Xq3NJJFUaPqiSfy2g=</dsig:DigestValue>
+        <dsig:DigestValue>42ZG43t7N4bd4mI1FEuPo683Oh347aE2IbEfiy/U/tY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
